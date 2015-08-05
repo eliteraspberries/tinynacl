@@ -703,7 +703,7 @@ sv modL(u8 *r,i64 x[64])
 sv reduce(u8 *r)
 {
   i64 x[64],i;
-  FOR(i,64) x[i] = (u64) r[i];
+  FOR(i,64) x[i] = (i64) r[i];
   FOR(i,64) r[i] = 0;
   modL(r,x);
 }
@@ -734,7 +734,7 @@ int crypto_sign(u8 *sm,u64 *smlen,const u8 *m,u64 n,const u8 *sk)
   reduce(h);
 
   FOR(i,64) x[i] = 0;
-  FOR(i,32) x[i] = (u64) r[i];
+  FOR(i,32) x[i] = (i64) r[i];
   FOR(i,32) FOR(j,32) x[i+j] += h[i] * (u64) d[j];
   modL(sm + 32,x);
 
