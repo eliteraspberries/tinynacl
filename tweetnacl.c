@@ -546,8 +546,6 @@ void crypto_hashblocks(u8 *x,const u8 *m,u64 n)
   }
 
   FOR(i,8) ts64(x+8*i,z[i]);
-
-  return n;
 }
 
 static const u8 iv[64] = {
