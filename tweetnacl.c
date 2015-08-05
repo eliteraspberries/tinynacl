@@ -518,7 +518,7 @@ static const u64 K[80] =
   0x4cc5d4becb3e42b6ULL, 0x597f299cfc657e2aULL, 0x5fcb6fab3ad6faecULL, 0x6c44198c4a475817ULL
 };
 
-int crypto_hashblocks(u8 *x,const u8 *m,u64 n)
+void crypto_hashblocks(u8 *x,const u8 *m,u64 n)
 {
   u64 z[8],b[8],a[8],w[16],t;
   int i,j;
