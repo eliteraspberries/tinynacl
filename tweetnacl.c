@@ -1,12 +1,14 @@
+#include <stdint.h>
+
 #include "tweetnacl.h"
 #define FOR(i,n) for (i = 0;i < n;++i)
 #define sv static void
 
-typedef unsigned char u8;
-typedef unsigned long u32;
-typedef unsigned long long u64;
-typedef long long i64;
-typedef i64 gf[16];
+typedef uint8_t u8;
+typedef uint32_t u32;
+typedef uint64_t u64;
+typedef int64_t i64;
+typedef int64_t gf[16];
 extern void randombytes(u8 *,u64);
 
 static const u8
